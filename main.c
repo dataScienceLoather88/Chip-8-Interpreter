@@ -350,6 +350,12 @@ int main(int argc, char* argv[])
         SKIP_INSTRUCTION_CYCLE:
     }
     END_PROGRAM:
+    SDL_DestroyTexture(texture);
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    SDL_CloseAudioDevice(dev);
+    SDL_Quit();
+    fclose(fp);
     return 0;
 }
 
